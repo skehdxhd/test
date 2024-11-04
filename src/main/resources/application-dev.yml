@@ -12,6 +12,17 @@ spring:
     password:  # H2 ?? ? ??? password ?? (??? ??? ??)
 
 management:
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health
+        exclude: *
+    enabled-by-default: false
   cloudwatch:
     metrics:
       export:

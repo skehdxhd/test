@@ -21,7 +21,9 @@ management:
     web:
       exposure:
         include: info, health
-        exclude: *
+    jmx:
+      exposure:
+        exclude: "*"
     enabled-by-default: false
   cloudwatch:
     metrics:
